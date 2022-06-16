@@ -25,16 +25,20 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput );
-        transform.Translate(movementDirection * speed * Time.deltaTime);
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput  );
+        transform.Translate(movementDirection * speed * Time.deltaTime,Space.World);
         movementDirection.Normalize();
 
         if (movementDirection != Vector3.zero)
         {
-            //transform.forward = movementDirection;
+            transform.forward = movementDirection;
             animator.SetBool("IsRun", true);
             //Debug.Log("diocane");
 
+        }
+        else
+        {
+            animator.SetBool("IsRun", false);
         }
     }
 }
