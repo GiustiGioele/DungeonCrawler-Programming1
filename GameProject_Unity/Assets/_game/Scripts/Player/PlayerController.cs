@@ -48,13 +48,24 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetBool("IsAttacking",true);
+            //Debug.Log("Attacca");
+            
         }
         else
         {
             animator.SetBool("IsAttacking",false);
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            animator.SetBool("IsAttacking2",true);
+            //Debug.Log("Attacca2");
+        }
+        else
+        {
+            animator.SetBool("IsAttacking2",false );
+        }
     }
-}
+}       
