@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     [SerializeField] Animator animator;
+    [SerializeField] Animator animatorAttack;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+        Attack();
     }
 
     public void Move()
@@ -39,6 +41,20 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("IsRun", false);
+        }
+
+
+    }
+
+    public void Attack()
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            animator.SetBool("IsAttacking",true);
+        }
+        else
+        {
+            animator.SetBool("IsAttacking",false);
         }
     }
 }
