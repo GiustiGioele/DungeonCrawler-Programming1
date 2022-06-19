@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5;
-    Rigidbody rb;
+    [SerializeField] SoundManager soundManager;
     private float horizontalInput;
     private float verticalInput;
     [SerializeField] Animator animator;
     [SerializeField] Animator animatorAttack;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+       
     }
 
     // Update is called once per frame
