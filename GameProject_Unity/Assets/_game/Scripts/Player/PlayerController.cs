@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5;
-    [SerializeField] SoundManager soundManager;
+    //[SerializeField] SoundManager soundManager;
+    [SerializeField] AudioSource walksound;
+    [SerializeField] AudioSource attacksound;
     private float horizontalInput;
     private float verticalInput;
     [SerializeField] Animator animator;
+    [SerializeField] Vector3 arrive;
+    
     [SerializeField] Animator animatorAttack;
     void Start()
     {
@@ -35,8 +39,15 @@ public class PlayerController : MonoBehaviour
         {
             transform.forward = movementDirection;
             animator.SetBool("IsRun", true);
-            //Debug.Log("diocane");
+            Debug.Log("diocane");
+            walksound.Play();
 
+        }
+        else if (Input.GetKeyDown(KeyCode.T)) 
+        {
+            transform.Translate(arrive);
+            
+            
         }
         else
         {
@@ -52,7 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsAttacking",true);
             //Debug.Log("Attacca");
-            
+            attacksound.Play();
         }
         else
         {
