@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
         {
             transform.forward = movementDirection;
             animator.SetBool("IsRun", true);
-            Debug.Log("diocane");
-            walksound.Play();
+            //Debug.Log("diocane");
+            //walksound.Play();
 
         }
         else if (Input.GetKeyDown(KeyCode.T)) 

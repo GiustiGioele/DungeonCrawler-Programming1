@@ -193,7 +193,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &127748499 stripped
 Transform:
@@ -341,8 +341,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 783101832}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 654839768}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -378,6 +378,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1738210264}
+  - {fileID: 1303349166}
+  - {fileID: 632731655}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -446,7 +448,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &783101834
@@ -467,11 +469,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 654839768}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalScale.x
@@ -487,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 531.55963
+      value: 65.05963
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalPosition.y
@@ -495,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -471.67102
+      value: -94.17102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalRotation.w
@@ -503,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalRotation.y
@@ -511,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d371c046917e1a44db1f7d8ef19a7463, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -736,8 +738,6 @@ MonoBehaviour:
   attacksound: {fileID: 0}
   animator: {fileID: 1303349165}
   arrive: {x: 0, y: 0, z: 0}
-  Health: 100
-  HealthBar: {fileID: 0}
   animatorAttack: {fileID: 1303349165}
 --- !u!136 &1303349168
 CapsuleCollider:
@@ -765,7 +765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bb3475bc72ac546bdf6d958a936e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHealth: 100
+  HealthBar: {fileID: 783101833}
+  health: 0
+  maxHealth: 100
 --- !u!1001 &1384394989
 PrefabInstance:
   m_ObjectHideFlags: 0
