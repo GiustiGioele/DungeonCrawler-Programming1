@@ -110,3 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12569913db9748342b83f461817bdc71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lenght: 0
+  spawnPoints: {fileID: 3831102324750158820}
+  enemy: {fileID: 0}
+  timer: 0
+  spawnDelay: 1
