@@ -5,18 +5,21 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float speed = 5;
+    [SerializeField] float speed = 20;
     //[SerializeField] SoundManager soundManager;
     [SerializeField] AudioSource walksound;
     [SerializeField] AudioSource attacksound;
     private float horizontalInput;
     private float verticalInput;
     [SerializeField] Animator animator;
-    [SerializeField] Vector3 arrive;
+    // [SerializeField] Vector3 arrive;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] GameObject coll;
+
     [SerializeField] Animator animatorAttack;
     void Start()
     {
-       
+        coll.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,24 +34,21 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput  );
-        transform.Translate(movementDirection * speed * Time.deltaTime,Space.World);
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
         movementDirection.Normalize();
+
 
         if (movementDirection != Vector3.zero)
         {
             transform.forward = movementDirection;
             animator.SetBool("IsRun", true);
-            Debug.Log("diocane");
+
             walksound.Play();
 
         }
-        else if (Input.GetKeyDown(KeyCode.T)) 
-        {
-            transform.Translate(arrive);
-            
-            
-        }
+
         else
         {
             animator.SetBool("IsRun", false);
@@ -57,26 +57,34 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void ActiveCollider()
+    {
+        coll.SetActive(true);
+    }
+    public void DeactiveCollider()
+    {
+        coll.SetActive(false);
+    }
     public void Attack()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetBool("IsAttacking",true);
+            animator.SetBool("IsAttacking", true);
             //Debug.Log("Attacca");
-            attacksound.Play();
+            //attacksound.Play();
         }
         else
         {
-            animator.SetBool("IsAttacking",false);
+            animator.SetBool("IsAttacking", false);
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            animator.SetBool("IsAttacking2",true);
+            animator.SetBool("IsAttacking2", true);
             //Debug.Log("Attacca2");
         }
         else
         {
-            animator.SetBool("IsAttacking2",false );
+            animator.SetBool("IsAttacking2", false);
         }
     }
-}       
+}
