@@ -96,11 +96,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 504740908209765409}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2
+  m_Enabled: 1
+  m_Radius: 1.0929712
+  m_Height: 2.5767763
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.00000032571174, y: 0.28838682, z: 0.59296995}
 --- !u!195 &504740908209765410
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -208,6 +208,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3329564851970773634, guid: bd3e90ae3ba2ce9438aa533787bbb2e1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329564851970773634, guid: bd3e90ae3ba2ce9438aa533787bbb2e1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd3e90ae3ba2ce9438aa533787bbb2e1, type: 3}
 --- !u!4 &39277113115455936 stripped
@@ -220,7 +228,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2519082596937576409, guid: bd3e90ae3ba2ce9438aa533787bbb2e1, type: 3}
   m_PrefabInstance: {fileID: 2969506825095464099}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &504740909811940400
+--- !u!114 &1854577979825220503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,10 +237,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 846776781707733882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c52c9451fe1e394fb2626b7693eb8cb, type: 3}
+  m_Script: {fileID: 11500000, guid: a65d70c8df4931d498f1124d9fef61e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyLife: 2
-  object1: {fileID: 504740908209765409}
-  damage1: 1
-  damage2: 2
+  life: {fileID: 0}
+  object1: {fileID: 846776781707733882}
+  damage: 0

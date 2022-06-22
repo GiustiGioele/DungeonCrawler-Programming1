@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 2955146988272215251}
   - component: {fileID: 8676289336066922827}
   - component: {fileID: 8676289336066922824}
-  - component: {fileID: 8676289336347734873}
+  - component: {fileID: 7474426947231703498}
   m_Layer: 0
   m_Name: Big Goomba
   m_TagString: Untagged
@@ -336,7 +336,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 828.3502, y: 766.1225, z: 533.2429}
   m_Center: {x: -23.42593, y: 382.5612, z: 108.32198}
---- !u!114 &8676289336347734873
+--- !u!114 &7474426947231703498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyLife: 2
-  object1: {fileID: 0}
+  object1: {fileID: 8676289335673475457}
   damage1: 1
   damage2: 2
 --- !u!1 &8676289335673475457
@@ -447,7 +447,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8676289335673475457}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2

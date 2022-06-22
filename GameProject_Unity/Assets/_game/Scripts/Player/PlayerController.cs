@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
     // [SerializeField] Vector3 arrive;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject coll;
-
+    [SerializeField] LifeBar PlayerLife;
+    [SerializeField] EnemyDamage enemyDamage;
     [SerializeField] Animator animatorAttack;
     void Start()
     {
@@ -25,8 +26,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        EnemyDamage();
         Move();
         Attack();
+        Die();
     }
 
     public void Move()
@@ -57,6 +60,18 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void EnemyDamage()
+    {
+        PlayerLife.health -= enemyDamage.damPlayer;
+    }
+    public void Die()
+    {
+
+        if (PlayerLife.health == 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
     public void ActiveCollider()
     {
         coll.SetActive(true);

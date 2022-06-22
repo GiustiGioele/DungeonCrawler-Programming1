@@ -13,8 +13,9 @@ public class Spawn : MonoBehaviour
     public void SpawnEnemy()
     {
         int check = 0;
-        Debug.Log(check);
+        //Debug.Log(check);
         int randInt = RandomLenght();
+        
 
         if (check < randInt)
         {
@@ -37,6 +38,7 @@ public class Spawn : MonoBehaviour
        return randInt;
 
     }
+   
     private void Update()
     {
         SpawnEnemy();

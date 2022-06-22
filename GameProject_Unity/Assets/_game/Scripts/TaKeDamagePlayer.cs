@@ -15,7 +15,7 @@ public class TaKeDamagePlayer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("dentro");
+        //Debug.Log("dentro");
         if (other.gameObject.tag == "PlayerWeapon")
         {
             TakeDamage();
