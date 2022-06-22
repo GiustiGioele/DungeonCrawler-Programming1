@@ -22,33 +22,17 @@ public class TaKeDamagePlayer : MonoBehaviour
         if (other.gameObject.tag == "PlayerWeapon")
         {
             TakeDamage();
-            Debug.Log(EnemyLife);
+           // Debug.Log(EnemyLife);
         }
     }
    
     private void Update()
     {
         
-        if(EnemyLife==0)
-        {
-            Debug.Log(isSpawned);
-           
-
-            if (isSpawned)
-            {
-                var randint=Random.Range(0,2);
-                if(randint==1)
-                {
-                    GameObject.Instantiate(key, this.gameObject.transform.position, Quaternion.identity);
-                    
-                    isSpawned=false;
-                   
-                   
-                }
-            }
+       
             Destroy(this.gameObject);
-            Destroy(object1);
+            object1.SetActive(false);
         }
     }
 
-}
+

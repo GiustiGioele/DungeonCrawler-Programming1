@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class KeyCollect : MonoBehaviour
 {
-    [SerializeField] GameObject Object;
-    [SerializeField] PlayerController player;
-    public bool inRange=false;
+  
+   [SerializeField]  PlayerController player;
+   static public bool inRange=false;
 
+   
     private void OnTriggerEnter(Collider other)
     {
         inRange=true;
 
     }
+    private void OnTriggerExit(Collider other)
+    {
+        inRange =false;
+    }
+    
+        
+    
     public void Collected()
     {
-       if (player.collected)
+       if (PlayerController.collected)
         {
             Destroy(this.gameObject);
         }
+    }
+    private void Update()
+    {
+        Collected();
     }
 }

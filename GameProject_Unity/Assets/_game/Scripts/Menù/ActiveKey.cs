@@ -9,12 +9,17 @@ public class ActiveKey : MonoBehaviour
     public Image spriteKey;
     public Sprite sprite;
 
-    //public KeyCollect collect;
-  public void SetImage()
+
+    public void SetImage()
     {
-        if (player.collected)
+        if (PlayerController.collected)
         {
+            Debug.Log(PlayerController.collected);
             spriteKey.sprite = sprite;
         }
+    }
+    private void Update()
+    {
+        SetImage();
     }
 }
