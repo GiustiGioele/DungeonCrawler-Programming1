@@ -13,5 +13,6 @@ public class MainMenù : MonoBehaviour
     {
         Debug.Log("QUIT!");
         Application.Quit();
+        SceneManager.LoadScene(3);
     }
 }
