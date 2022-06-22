@@ -8,6 +8,8 @@ public class TaKeDamagePlayer : MonoBehaviour
     public GameObject object1;
     public int damage1 = 1;
     public int damage2 = 2;
+    [SerializeField] GameObject key;
+    static bool isSpawned=false;
     public void TakeDamage()
     {
        EnemyLife=EnemyLife-damage1;
@@ -30,6 +32,15 @@ public class TaKeDamagePlayer : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(object1);
+            if(isSpawned)
+            {
+                var randint=Random.Range(0,2);
+                if(randint==1)
+                {
+                    GameObject.Instantiate(key, this.gameObject.transform.position, Quaternion.identity);
+                    isSpawned=true;
+                }
+            }
         }
     }
 

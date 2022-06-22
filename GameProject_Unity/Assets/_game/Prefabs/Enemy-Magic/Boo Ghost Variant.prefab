@@ -28,12 +28,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3246455548317131499, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246455548317131499, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246455548317131499, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246455548317131499, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 406.87
       objectReference: {fileID: 0}
     - target: {fileID: 3246455548317131499, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.92
+      value: -14.18
       objectReference: {fileID: 0}
     - target: {fileID: 3246455548317131499, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69,11 +81,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873372568884595284, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
       propertyPath: m_Name
-      value: Boo Ghost
+      value: Boo Ghost Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3873372568884595284, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371261754899013179, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 131a70de39fc7024bbb83b9163f1debe, type: 3}
@@ -116,3 +132,4 @@ MonoBehaviour:
   object1: {fileID: 3024109135046110455}
   damage1: 1
   damage2: 2
+  key: {fileID: 0}
