@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] EnemyDamage enemyDamage;
     [SerializeField] Animator animatorAttack;
     [SerializeField] KeyCollect collect;
-    public bool collected=false;
+  static  public  bool collected=false;
     public GameObject gameObject;
     void Start()
     {

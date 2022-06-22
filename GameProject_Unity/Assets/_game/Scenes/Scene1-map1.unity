@@ -1032,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5669858436564658787, guid: 08aeda81da41a1f4785ad5025c5a6327, type: 3}
       propertyPath: spawnDelay
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3720808200010188752, guid: 08aeda81da41a1f4785ad5025c5a6327, type: 3}
       propertyPath: m_RootOrder
@@ -2707,6 +2707,7 @@ MonoBehaviour:
   enemyDamage: {fileID: 5866666020972112015}
   animatorAttack: {fileID: 5866666020972112012}
   collect: {fileID: 842173163}
+  gameObject: {fileID: 0}
 --- !u!136 &1303349168
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6303,6 +6304,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4629817638818951113, guid: 41c2cac7c64dab744a3981032bb4ecfe, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629817639230809871, guid: 41c2cac7c64dab744a3981032bb4ecfe, type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5512691048481921623, guid: 41c2cac7c64dab744a3981032bb4ecfe, type: 3}
