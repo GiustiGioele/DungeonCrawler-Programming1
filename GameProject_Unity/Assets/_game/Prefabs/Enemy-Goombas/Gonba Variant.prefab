@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7474426947231703498, guid: 1ceca0c205da7964da5d208d7a56aa28, type: 3}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 8032536998528902424, guid: a65d2078668af71498caf339f64acab3, type: 3}
     - target: {fileID: 8406310649395307539, guid: 1ceca0c205da7964da5d208d7a56aa28, type: 3}
       propertyPath: m_TagString
       value: agent

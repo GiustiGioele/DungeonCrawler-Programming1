@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LifeBar PlayerLife;
     [SerializeField] EnemyDamage enemyDamage;
     [SerializeField] Animator animatorAttack;
+    [SerializeField] KeyCollect collect;
+    public bool collected=false;
     void Start()
     {
         coll.SetActive(false);
@@ -79,6 +81,13 @@ public class PlayerController : MonoBehaviour
     public void DeactiveCollider()
     {
         coll.SetActive(false);
+    }
+    public void CollectKey()
+    {
+        if(Input.GetKeyDown(KeyCode.Mouse0)|collect.inRange)
+        {
+            collected=true;
+        }
     }
     public void Attack()
     {
