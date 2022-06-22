@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CollectKey();
         EnemyDamage();
         Move();
         Attack();
@@ -85,9 +86,11 @@ public class PlayerController : MonoBehaviour
     }
     public void CollectKey()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0)|collect.inRange)
+        Debug.Log(KeyCollect.inRange);
+        if(Input.GetKeyDown(KeyCode.Mouse1)&KeyCollect.inRange)
         {
             collected=true;
+            Debug.Log(collected);
         }
     }
     public void Attack()

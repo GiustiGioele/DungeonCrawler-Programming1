@@ -17,15 +17,11 @@ public class EnemyDamage : MonoBehaviour
 
         if (other.CompareTag("agent"))
         {
-            Debug.Log("dentro1");
+            //Debug.Log("dentro1");
             life.health -= damage.damage;
-            Debug.Log(damage.damage);
+            //Debug.Log(damage.damage);
         }
-        else
-        {
-            life.health -= damage2.damage1;
-            Debug.Log(damage.damage1);
-        }
+       
 
 
 
