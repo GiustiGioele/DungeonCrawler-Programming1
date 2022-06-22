@@ -37,6 +37,7 @@ TagManager:
   - switchOff
   - plus
   - Enemy
+  - Scene2
   layers:
   - Default
   - TransparentFX

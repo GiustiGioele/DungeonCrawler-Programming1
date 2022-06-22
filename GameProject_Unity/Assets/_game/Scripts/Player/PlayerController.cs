@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animatorAttack;
     [SerializeField] KeyCollect collect;
     public bool collected=false;
+    public GameObject gameObject;
     void Start()
     {
         coll.SetActive(false);
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         if (PlayerLife.health == 0)
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
     public void ActiveCollider()
