@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActiveKey : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] PlayerController player;
+    public Image spriteKey;
+    public Sprite sprite;
 
-    // Update is called once per frame
-    void Update()
+    //public KeyCollect collect;
+  public void SetImage()
     {
-        
+        if (player.collected)
+        {
+            spriteKey.sprite = sprite;
+        }
     }
 }
