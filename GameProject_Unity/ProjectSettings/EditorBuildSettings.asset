@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_game/Scenes/main.unity
-    guid: e9d1429bf0a6547d8b540ffaab329780
+    path: "Assets/_game/Scenes/Scene0-Men\xF9.unity"
+    guid: a72e966a6df9a2f42a2ba171961404e2
   - enabled: 1
     path: Assets/_game/Scenes/Scene1-map1.unity
     guid: 4a729b98528b1d74391589168f3c94f0
+  - enabled: 1
+    path: Assets/_game/Scenes/Scene2-MenuEndGame.unity
+    guid: 291a04086f9929746b383d033d4c9d55
+  - enabled: 1
+    path: Assets/_game/Scenes/Scene3-QuitScene.unity
+    guid: c14e80f1df461074a80db38e2002c7e7
   m_configObjects: {}
