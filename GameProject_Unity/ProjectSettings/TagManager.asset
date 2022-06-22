@@ -36,6 +36,7 @@ TagManager:
   - tile
   - switchOff
   - plus
+  - Enemy
   layers:
   - Default
   - TransparentFX

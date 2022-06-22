@@ -1626,6 +1626,8 @@ MonoBehaviour:
   animator: {fileID: 5866666020972112012}
   rb: {fileID: 0}
   coll: {fileID: 1242791484}
+  PlayerLife: {fileID: 5866666020972112014}
+  enemyDamage: {fileID: 5866666020972112015}
   animatorAttack: {fileID: 5866666020972112012}
 --- !u!136 &1303349168
 CapsuleCollider:
@@ -2092,6 +2094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gonba
       objectReference: {fileID: 0}
+    - target: {fileID: 8676289335673475459, guid: 1ceca0c205da7964da5d208d7a56aa28, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 7628141863137794456}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ceca0c205da7964da5d208d7a56aa28, type: 3}
 --- !u!4 &49240567721202270
@@ -2744,6 +2750,7 @@ GameObject:
   - component: {fileID: 1303349170}
   - component: {fileID: 5866666020972112013}
   - component: {fileID: 5866666020972112014}
+  - component: {fileID: 5866666020972112015}
   m_Layer: 0
   m_Name: hippo warrior with animation (1)
   m_TagString: Player
@@ -6170,6 +6177,21 @@ MonoBehaviour:
   HealthBar: {fileID: 337073272}
   health: 0
   maxHealth: 100
+--- !u!114 &5866666020972112015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149022992460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65d70c8df4931d498f1124d9fef61e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 5866666020972112014}
+  damage: 1
+  damPlayer: 0
 --- !u!1 &5873568830427092246
 GameObject:
   m_ObjectHideFlags: 0
