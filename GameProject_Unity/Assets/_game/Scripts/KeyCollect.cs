@@ -7,8 +7,8 @@ public class KeyCollect : MonoBehaviour
   
    [SerializeField]  PlayerController player;
    static public bool inRange=false;
+    public bool collected = false;
 
-   
     private void OnTriggerEnter(Collider other)
     {
         inRange=true;

@@ -38,6 +38,7 @@ TagManager:
   - plus
   - Enemy
   - Scene2
+  - win
   layers:
   - Default
   - TransparentFX
